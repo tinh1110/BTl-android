@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,15 +41,9 @@ public class PlaceOrderActivity extends AppCompatActivity {
 
         db=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
-        btBack=findViewById(R.id.btnBack);
-        btBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PlaceOrderActivity.this, Normal_User.class));
-            }
-        });
 
         List<CartModel> cartModelList= (ArrayList<CartModel>) getIntent().getSerializableExtra("itemlist");
+        Log.d("model",cartModelList.size()+"");
         if(cartModelList!=null&& cartModelList.size()>0){
             for(CartModel cartModel :cartModelList){
                 HashMap<String,Object> cart=new HashMap<>();
@@ -60,13 +55,22 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 cart.put("totalPrice",cartModel.getTotalPrice());
                 db.collection("CurrentUser").document(firebaseAuth.getCurrentUser().getUid())
                         .collection("MyOrder").add(cart).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentReference> task) {
 
-                    }
-                });
+                            }
+                        });
             }
-            Toast.makeText(PlaceOrderActivity.this, "Đã xác nhận đơn hàng1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PlaceOrderActivity.this, "Đã xác nhận đơn hàng", Toast.LENGTH_SHORT).show();
         }
+        btBack=findViewById(R.id.btnBack);
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(PlaceOrderActivity.this, Normal_User.class));
+            }
+        });
+
+
     }
 }

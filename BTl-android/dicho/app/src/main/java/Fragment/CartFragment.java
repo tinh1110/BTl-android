@@ -93,9 +93,8 @@ public class CartFragment extends Fragment {
                 if(cartModelList.size()>0) {
                     Intent i = new Intent(getContext(), PlaceOrderActivity.class);
                     i.putExtra("itemlist", (Serializable) cartModelList);
-//                    cartModelList.clear();
-                    delete();
                     startActivity(i);
+                    delete();
                 }else {
                     Toast.makeText(view.getContext(), "Bạn chưa có mặt hàng nào! Hãy thêm một vài món vào giỏ hàng", Toast.LENGTH_LONG).show();
                     Intent i= new Intent(getContext(), Normal_User.class);
@@ -115,8 +114,6 @@ public class CartFragment extends Fragment {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-
-
                             }
                             else
                                 Toast.makeText(getActivity(), "Lỗi "+task.getException().getMessage()+"!", Toast.LENGTH_SHORT).show();
