@@ -23,10 +23,11 @@ import java.util.Objects;
 
 import Adapter.NavCategoryAdapter;
 import Model.NavCategoryModel;
+import Model.ViewallModel;
 
 public class NavCategoryActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    List<NavCategoryModel>navCategoryModelList;
+    List<ViewallModel> navCategoryModelList;
     NavCategoryAdapter navCategoryAdapter;
 
     FirebaseFirestore db;
@@ -47,7 +48,7 @@ public class NavCategoryActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         db=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
-        navCategoryModelList=new ArrayList<>();
+        navCategoryModelList=new ArrayList<ViewallModel>();
 
         navCategoryAdapter=new NavCategoryAdapter(this,navCategoryModelList);
 
@@ -57,7 +58,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }
@@ -70,7 +71,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }
@@ -83,7 +84,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }
@@ -96,7 +97,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }
@@ -109,7 +110,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }
@@ -121,7 +122,7 @@ public class NavCategoryActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
-                        NavCategoryModel navCategoryModel= documentSnapshot.toObject(NavCategoryModel.class);
+                        ViewallModel navCategoryModel= documentSnapshot.toObject(ViewallModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
                     }

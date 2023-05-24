@@ -116,6 +116,7 @@ public class Manage extends AppCompatActivity {
                                 for(DocumentSnapshot documentSnapshot:task.getResult().getDocuments()){
                                     ViewallModel recommenedModel= documentSnapshot.toObject(ViewallModel.class);
                                     listAll.add(recommenedModel);
+                                    listid.add(documentSnapshot.getId());
                                     adapter.notifyDataSetChanged();
                                 }
                             }

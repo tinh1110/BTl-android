@@ -17,14 +17,13 @@ import com.example.Activity.R;
 import java.util.List;
 
 import Activity.DetailedActivity;
-import Activity.NavCategoryActivity;
-import Model.NavCategoryModel;
+import Model.ViewallModel;
 
 public class NavCategoryAdapter extends RecyclerView.Adapter<NavCategoryAdapter.ViewHolder> {
     Context context;
-    List<NavCategoryModel> navCategoryModelList;
+    List<ViewallModel> navCategoryModelList;
 
-    public NavCategoryAdapter(Context context, List<NavCategoryModel> navCategoryModelList) {
+    public NavCategoryAdapter(Context context, List<ViewallModel> navCategoryModelList) {
         this.context = context;
         this.navCategoryModelList = navCategoryModelList;
     }

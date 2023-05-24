@@ -60,11 +60,11 @@ public class DetailedActivity extends AppCompatActivity {
         if(object instanceof ViewallModel){
             viewallModel=(ViewallModel) object;
         }
-        final Object object2=getIntent().getSerializableExtra("detail");
-
-        if(object2 instanceof NavCategoryModel){
-            navCategoryModel=(NavCategoryModel) object2;
-        }
+//        final Object object2=getIntent().getSerializableExtra("detail");
+//
+//        if(object2 instanceof NavCategoryModel){
+//            navCategoryModel=(NavCategoryModel) object2;
+//        }
         quantity=findViewById(R.id.quantity);
         detailed_img=findViewById(R.id.detailed_img);
         additem=findViewById(R.id.add_item);
@@ -81,13 +81,13 @@ public class DetailedActivity extends AppCompatActivity {
             total_price=viewallModel.getPrice()*total_quantity;
         }
 
-        if(navCategoryModel!=null){
-            Glide.with(getApplicationContext()).load(navCategoryModel.getImg_Url()).into(detailed_img);
-            rating.setText(navCategoryModel.getRate());
-            price.setText(navCategoryModel.getPrice()+"đ");
-            des.setText(navCategoryModel.getDescription());
-            total_price=  (navCategoryModel.getPrice())*total_quantity;
-        }
+//        if(navCategoryModel!=null){
+//            Glide.with(getApplicationContext()).load(navCategoryModel.getImg_Url()).into(detailed_img);
+//            rating.setText(navCategoryModel.getRate());
+//            price.setText(navCategoryModel.getPrice()+"đ");
+//            des.setText(navCategoryModel.getDescription());
+//            total_price=  (navCategoryModel.getPrice())*total_quantity;
+//        }
 
         add_to_cart=findViewById(R.id.add_to_cart);
         add_to_cart.setOnClickListener(new View.OnClickListener() {
