@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "611979457958",
+    "firebase_url": "https://dichotructuyen-d08cf-default-rtdb.firebaseio.com",
+    "project_id": "dichotructuyen-d08cf",
+    "storage_bucket": "dichotructuyen-d08cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611979457958:android:0fcbe6cba907fa82a20b67",
+        "android_client_info": {
+          "package_name": "com.example.ichtrctuyn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611979457958-irhpm3bjnqnt2qdk5p5u9scpkrdb1rgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_98602hvFXk3kQ4j-7GmSgnPGP1a8xuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611979457958-irhpm3bjnqnt2qdk5p5u9scpkrdb1rgj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name="Activity.UpdateProduct"
+            android:exported="false" />
+        <activity
+            android:name="Activity.AddProduct"
+            android:exported="false" />
+        <activity
+            android:name="Activity.History"
+            android:exported="false" />
+        <activity
+            android:name="Activity.Manage"
+            android:exported="false" />
+        <activity
+            android:name="Activity.ChangePassword"
+            android:exported="true" />
+        <activity
+            android:name="Activity.UpdateUserActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.Login"
+            android:exported="true" />
+        <activity
+            android:name="Activity.PlaceOrderActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.NavCategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.DetailedActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.ViewAllActivity"
+            android:exported="true" />
+        <activity
+            android:name="Activity.ResetPass"
+            android:exported="true" />
+        <activity
+            android:name="Activity.Normal_User"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="Activity.Activity_Signup"
+            android:exported="true" />
+        <activity
+            android:name="Activity.Welcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

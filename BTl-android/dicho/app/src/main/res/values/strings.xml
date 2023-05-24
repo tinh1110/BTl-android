@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Đi chợ trực tuyến</string>
+    <string name="sdt">Số điện thoại:</string>
+    <string name="title_shop">Cửa hàng</string>
+    <string name="title_gifts">Giỏ hàng</string>
+    <string name="title_cat">Danh mục</string>
+    <string name="title_profile">Cá nhân</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tksForYourOrder">Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi! Hãy quay lại và tiếp tục khám phá những sản phẩm mới.</string>
+    <string name="comfirmOrder">Đơn hàng của bạn đang được chuẩn bị và sẽ được chuyển đến trong vài giờ nữa!</string>
+</resources>
